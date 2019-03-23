@@ -1,5 +1,5 @@
 function Person() {
-  this.pos = createVector(50, 250);
+  this.pos = createVector(500, 250);
   this.vel = createVector(1, 0);
   this.acc = createVector(0, 0);
   this.mass = 10;
@@ -14,9 +14,9 @@ function Person() {
     
   }
   this.display = function() {
-    fill(255, 150);
-    stroke(255);
-    rect(this.pos.x, this.pos.y, this.mass*10, this.mass*10);
+   fill(25, 51, 8);
+    stroke(255)
+    ellipse(this.pos.x, this.pos.y, this.mass*10, this.mass*10);
       
  //amount of jump
      text("Amount of jumps in Level one: "+this.jump,190+this.pos.x,125);
