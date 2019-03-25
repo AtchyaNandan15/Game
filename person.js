@@ -1,5 +1,5 @@
 
-
+ 
 function Person() {
   this.pos = createVector(500, 250);
   this.vel = createVector(1, 10);
@@ -24,9 +24,8 @@ function Person() {
     ellipse( this.pos.x +40, this.pos.y, 20,20);
     
  //amount of jump
-     text("Amount of jumps in Level one: "+this.jump,190+this.pos.x,125);
-    
-    
+     text("Amount of jumps in Level       : "+this.jump,190+this.pos.x,80);
+       
   }
   this.edges = function() {
     if (this.pos.y > 250) {
@@ -36,9 +35,7 @@ function Person() {
   }
   this.count= function() {
     this.jump++;
-    
-    
   }
 }
-
-// second scene
+    
+  
