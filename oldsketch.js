@@ -1,4 +1,3 @@
-# Game
 var person;
 var sceneNum=0;
 
