@@ -1,5 +1,6 @@
 //variables
 var person;
+var person2;
 var sceneNum=0;
 
 function setup() {
@@ -37,6 +38,8 @@ function draw() {
     textSize(80);
     fill(50,30,200);
     text("GALAXY GAME", 50, 75)
+    textSize(50);
+    text("By Atchya Nandan" ,100,300);
     textSize(20);
     fill(200,100, 200);
 
@@ -70,7 +73,7 @@ strokeWeight(2);
 stroke(214, 13, 207);
 line(82, 393,348,325);
 
-strokeWeight(4);
+strokeWeight(2);
 stroke(55, 204, 250);
 line(-79, 388,374,320);
 
@@ -89,6 +92,9 @@ ellipse(247,98,2,2);
 ellipse(184,158,2,2);
 ellipse(93,74,2,2);
 ellipse(317,129,2,2);
+   
+text("1",555,80);
+    text("click 'a' to got to the next level",200,25);
 
 //more color
 
@@ -107,9 +113,9 @@ ellipse(317,129,2,2);
   }
     //rectancles size and color and edges
   //translate(-person.pos.x,0);
-    person.update();
+  person.update();
   person.edges();
-    person.display();
+  person.display();
   fill(255,0,200);
   rect(400, height-50,70,50);
 
@@ -163,6 +169,8 @@ ellipse(184,158,2,2);
 ellipse(93,74,2,2);
 ellipse(317,129,2,2);
 ellipse(80,185,2,2);
+    text("2",555,80);
+
     
      //the gravity for the circle
   translate(-person.pos.x,0);
@@ -178,6 +186,82 @@ ellipse(80,185,2,2);
   }
     //rectancles size and color and edges
   //translate(-person.pos.x,0);
+  person.update();
+  person.edges();
+  person.display();
+     //text("Amount of jumps in Level two: "+this.jump,190,125);
+
+  fill(255,0,200);
+  rect(400, height-50,70,50);
+
+  
+   
+  person.update();
+  person.edges();
+  person.display();
+     //text("Amount of jumps in Level two: "+this.jump,190,125);
+
+     fill(20,202,200,20); 
+  
+    //loop
+
+for (i=400; i < 4000; i=i+300) { 
+      rect(i, height-150,150,200);
+  text("value ", i);
+
+
+
+  
+}
+}else if(sceneNum===3){
+//decoration
+    background(44, 17, 102);
+strokeWeight(6);
+stroke(52, 224, 161);
+line(10, 400,320,325);
+strokeWeight(2);
+stroke(214, 13, 207);
+line(82, 393,348,325);
+
+strokeWeight(4);
+stroke(55, 204, 250);
+line(-79, 388,374,320);
+
+//star
+stroke(255, 255, 255);
+ellipse(143,120,2,2);
+ellipse(143,120,5,2);
+ellipse(247,98,2,2);
+ellipse(184,158,2,2);
+ellipse(93,74,2,2);
+ellipse(317,129,2,2);
+    stroke(255, 255, 255);
+ellipse(143,120,2,2);
+ellipse(143,120,5,2);
+ellipse(247,98,2,2);
+ellipse(184,158,2,2);
+ellipse(93,74,2,2);
+ellipse(317,129,2,2);
+  text("3",555,80);
+
+
+//more color
+
+      
+    //the gravity for the circle
+  translate(-person.pos.x,0);
+  var gravity = createVector(0,0.1);
+  person.applyForce(gravity);
+  if(mouseIsPressed){
+      
+    
+    
+  //force
+  var force = createVector(-0.1,0);
+  person.applyForce(force);
+  }
+    //rectancles size and color and edges
+  //translate(-person.pos.x,0);
     person.update();
   person.edges();
     person.display();
@@ -189,24 +273,27 @@ ellipse(80,185,2,2);
   person.update();
   person.edges();
   person.display();
-     fill(20,202,200,20); 
-//fill(204, 106, 145);
-  
-  
-    //loop
+  fill(127, 92, 204);
 
-for (i=400; i < 4000; i=i+300) { 
-      rect(i, height-150,150,200);
+
+  
+  //rect(400, height-50,100,200);
+  //  rect(900, height-100,100,200);
+  //  rect(1400, height-100,100,200); 
+  //  rect(1700, height-100,100,200);
+ //   rect(2000, height-100,100,200);
+    //loop
+    var i = 400;
+for (i=400; i < 7000; i=i+300) { 
+      rect(i, height-250,50,150);
   text("value ", i);
+  fill(20,202,200,20);// transparent
+  ellipse(333,200,20,200);
 
 
   
 }
-
-
-  
  
-    
     
 
             
@@ -214,9 +301,10 @@ for (i=400; i < 4000; i=i+300) {
    background(44, 17, 102);
     fill(10,1,13);
     textSize(50);
-    strokeWeight(10);
-    text("That is all!",400,200);
-
+    strokeWeight(5);
+    text("Game over!",200,200);
+    textSize(20);
+text("By Atchya Nandan", 200,300);
     fill(56, 217, 174);
 triangle(20,50,100,200,50,30);
 fill(196, 153, 153);
@@ -235,12 +323,4 @@ fill(196, 153, 153);
 }
 
   
-    
-
-    
-  
-
-}
-}
-
   
